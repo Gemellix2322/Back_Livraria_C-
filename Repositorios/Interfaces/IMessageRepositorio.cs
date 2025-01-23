@@ -7,5 +7,8 @@ namespace BackLivrariaTeste.Repositorios.Interfaces
         Task<List<MessagesModel>> GetMessages();
 
         Task<List<MessagesModel>> SetMessages(MessagesModel message);
+
+        Task<MessagesModel> MessagePorId(int id);
+
     }
 }

@@ -24,5 +24,29 @@ namespace BackLivrariaTeste.Repositorios
             await _dbContext.SaveChangesAsync();
             return await _dbContext.livros.ToListAsync() ;
         }
+
+        async Task<LivrosModel> ILivrosRepositorio.LivrosPorId(int id)
+        {
+            return await _dbContext.livros.FirstOrDefaultAsync(x => x.id == id);
+        }
+
+        async Task<LivrosModel> ILivrosRepositorio.UpdateLivros(LivrosModel newLivro, int id)
+        {
+            LivrosModel livroPorId = await _dbContext.livros.FirstOrDefaultAsync(x => x.id == id);
+
+            if(livroPorId == null)
+            {
+                throw new Exception($"Livro por id: {id} não foi encontrado");
+            }
+
+            livroPorId.name = newLivro.name;
+            livroPorId.description = newLivro.description;
+            livroPorId.genre = newLivro.genre;
+            livroPorId.cover_image = newLivro.cover_image;
+
+            _dbContext.livros.Update(livroPorId);
+            await _dbContext.SaveChangesAsync();
+            return livroPorId;
+        }
     }
 }

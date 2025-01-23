@@ -25,6 +25,13 @@ namespace back_teste.Controllers
             return Ok(messages);
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<MessagesModel>> MessagePorId(int id)
+        {
+            MessagesModel message = await _messageRepositorio.MessagePorId(id);
+            return Ok(message);
+        }
+
         [HttpPut]
         public async Task<ActionResult<List<MessagesModel>>> SetMessages([FromBody] MessagesModel messagesModel)
         {

@@ -25,5 +25,10 @@ namespace BackLivrariaTeste.Repositorios
             await _dbContext.SaveChangesAsync();
             return await _dbContext.messages.ToListAsync();
         }
-}
+
+        async Task<MessagesModel> IMessageRepositorio.MessagePorId(int id)
+        {
+            return await _dbContext.messages.FirstOrDefaultAsync(x => x.id == id);
+        }
+    }
 }
