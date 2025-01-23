@@ -17,5 +17,12 @@ namespace BackLivrariaTeste.Repositorios
         {
             return await _dbContext.livros.ToListAsync();
         }
+
+        async Task<List<LivrosModel>> ILivrosRepositorio.SetLivros(LivrosModel livros)
+        {
+            _dbContext.livros.Add(livros);
+            await _dbContext.SaveChangesAsync();
+            return await _dbContext.livros.ToListAsync() ;
+        }
     }
 }

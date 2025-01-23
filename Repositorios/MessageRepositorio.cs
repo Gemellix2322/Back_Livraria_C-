@@ -18,5 +18,12 @@ namespace BackLivrariaTeste.Repositorios
         {
             return await _dbContext.messages.ToListAsync();
         }
-    }
+
+        async Task<List<MessagesModel>> IMessageRepositorio.SetMessages(MessagesModel messages)
+        {
+            _dbContext.messages.Add(messages);
+            await _dbContext.SaveChangesAsync();
+            return await _dbContext.messages.ToListAsync();
+        }
+}
 }

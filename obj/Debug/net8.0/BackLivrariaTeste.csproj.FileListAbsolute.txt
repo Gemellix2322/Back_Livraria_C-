@@ -139,3 +139,4 @@ C:\Users\iData_Gemelli\Documents\Cursos\API\BackLivrariaTeste\BackLivrariaTeste\
 C:\Users\iData_Gemelli\Documents\Cursos\API\BackLivrariaTeste\BackLivrariaTeste\obj\Debug\net8.0\BackLivrariaTeste.pdb
 C:\Users\iData_Gemelli\Documents\Cursos\API\BackLivrariaTeste\BackLivrariaTeste\obj\Debug\net8.0\BackLivrariaTeste.genruntimeconfig.cache
 C:\Users\iData_Gemelli\Documents\Cursos\API\BackLivrariaTeste\BackLivrariaTeste\obj\Debug\net8.0\ref\BackLivrariaTeste.dll
+C:\Users\iData_Gemelli\Documents\Cursos\API\BackLivrariaTeste\BackLivrariaTeste\obj\Debug\net8.0\BackLivrariaTeste.sourcelink.json

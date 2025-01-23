@@ -20,6 +20,32 @@
     ]
   },
   {
+    "ContainingType": "back_teste.Controllers.LivrosController",
+    "Method": "SetLivros",
+    "RelativePath": "api/Livros",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "livros",
+        "Type": "back_teste.Model.LivrosModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[back_teste.Model.LivrosModel, BackLivrariaTeste, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "back_teste.Controllers.MessagesController",
     "Method": "GetMessages",
     "RelativePath": "api/Messages",
@@ -40,6 +66,32 @@
     ]
   },
   {
+    "ContainingType": "back_teste.Controllers.MessagesController",
+    "Method": "SetMessages",
+    "RelativePath": "api/Messages",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "messagesModel",
+        "Type": "back_teste.Model.MessagesModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[back_teste.Model.MessagesModel, BackLivrariaTeste, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "back_teste.Controllers.UsuarioController",
     "Method": "GetUsuarios",
     "RelativePath": "api/Usuario",
@@ -47,6 +99,32 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[back_teste.Model.UsuarioModel, BackLivrariaTeste, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "back_teste.Controllers.UsuarioController",
+    "Method": "SetUsuarios",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioModel",
+        "Type": "back_teste.Model.UsuarioModel",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[back_teste.Model.UsuarioModel, BackLivrariaTeste, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",

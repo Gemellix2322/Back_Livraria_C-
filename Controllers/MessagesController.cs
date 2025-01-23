@@ -10,11 +10,26 @@ namespace back_teste.Controllers
     [ApiController]
     public class MessagesController : ControllerBase
     {
+
+        private readonly IMessageRepositorio _messageRepositorio;
+
+        public MessagesController(IMessageRepositorio messageRepositorio)
+        {
+            _messageRepositorio = messageRepositorio;
+        }
+
         [HttpGet]
         public async Task<ActionResult<List<MessagesModel>>> GetMessages([FromServices] IMessageRepositorio messageRepositorio)
         {
             List<MessagesModel> messages = await messageRepositorio.GetMessages();
             return Ok(messages);
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<List<MessagesModel>>> SetMessages([FromBody] MessagesModel messagesModel)
+        {
+            List<MessagesModel> message = await _messageRepositorio.SetMessages(messagesModel);
+            return Ok(message);
         }
     }
 }
