@@ -30,6 +30,16 @@ namespace back_teste
                 )
             );
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp", policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
+
             builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
             builder.Services.AddScoped<IMessageRepositorio, MessageRepositorio>();
